@@ -1,3 +1,4 @@
-header {
-    background-color: blue;
-}
+@use '_base.scss';
+@use '_layout.scss';
+
+@use './components/_Location.scss';

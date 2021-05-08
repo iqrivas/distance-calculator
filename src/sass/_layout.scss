@@ -1,0 +1,18 @@
+@use '_base.scss';
+
+.header {
+    @include base.flex;
+    font-size: 1.4rem;
+    margin: 1rem
+}
+.container {
+    @include base.flex;
+    margin: auto;
+    max-width: 800px;
+    padding: 1rem;
+    border: 1px solid blue;
+
+    h2 {
+        text-align: center;
+    }
+}

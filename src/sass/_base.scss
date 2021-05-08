@@ -1,0 +1,17 @@
+//Resets
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+    font-family: "DM Sans", sans-serif;
+  }
+
+//Mixin
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

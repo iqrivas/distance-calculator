@@ -24,7 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Distance Calculator</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +39,28 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=%REACT_APP_GMAPS%"></script>
+    <script>
+      google.maps.event.addDomListener(window, 'load', initialize);
+        function initialize() {
+          var input_origin = document.getElementById('autocomplete-origin');
+          var input_destination = document.getElementById('autocomplete-destination');
+          var autocomplete_origin = new google.maps.places.Autocomplete(input_origin);
+          var autocomplete_destination = new google.maps.places.Autocomplete(input_destination);
+          autocomplete_origin.addListener('place_changed', function () {
+            var place_origin = autocomplete_origin.getPlace();
+            // place variable will have all the information you are looking for.
+            $('#lat').val(place_origin.geometry['location'].lat());
+            $('#long').val(place_origin.geometry['location'].lng());
+          });
+          autocomplete_destination.addListener('place_changed', function () {
+            var place_destination = autocomplete_destination.getPlace();
+            // place variable will have all the information you are looking for.
+            $('#lat').val(place_destination.geometry['location'].lat());
+            $('#long').val(place_destination.geometry['location'].lng());
+          });
+      }
+
+    </script>
   </body>
 </html>
