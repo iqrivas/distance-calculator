@@ -17,24 +17,55 @@ html {
   margin: 1rem;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+.grid {
+  display: grid;
+  justify-items: center;
+  grid-template-areas: "origin destination" "calc calc" "map map";
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  min-width: 340px;
   max-width: 800px;
+  margin: auto;
   padding: 1rem;
-  border: 1px solid blue;
 }
-.container h2 {
+.grid h2 {
   text-align: center;
 }
 
+#origin {
+  grid-area: origin;
+}
+
+#destination {
+  grid-area: destination;
+}
+
+#calc_btn {
+  grid-area: calc;
+}
+
+#map {
+  grid-area: map;
+}
+
+@media all and (max-width: 650px) {
+  .grid {
+    grid-template-areas: "origin" "destination" "calc" "map";
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+  }
+}
 .location {
-  margin: 2rem;
+  margin: 1rem;
   padding: 1rem;
   width: 100%;
-  border: 1px solid green;
+  min-width: 250px;
+  max-width: 320px;
+  border-radius: 0 0 10px 10px;
+  border-top: 5px solid rebeccapurple;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .location__title {
   margin: 1rem;
@@ -43,4 +74,12 @@ html {
   width: 100%;
   padding: 0.5rem 1rem;
   text-align: center;
+}
+.location__input:focus {
+  border: 1px solid;
+}
+.location__details {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
