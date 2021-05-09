@@ -11,10 +11,11 @@
   grid-template-areas:
     "origin destination"
     "calc calc"
+    "res res"
     "map map";
   grid-auto-rows: auto;
   grid-template-columns: 1fr 1fr;
-  grid-row-gap: 10px;
+  grid-row-gap: 15px;
   grid-column-gap: 5px;
   min-width: 340px;
   max-width: 800px;
@@ -39,6 +40,10 @@
   grid-area: calc;
 }
 
+#results {
+  grid-area: res;
+}
+
 #map {
   grid-area: map;
 }
@@ -49,8 +54,14 @@
       "origin"
       "destination"
       "calc"
+      "res"
       "map";
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
+  }
+
+  .results {
+    width: 100%;
+    min-width: 250px;
   }
 }

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './sass/App.scss';
 
 import Location from './components/Location';
+import Results from './components/Results';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <main className="grid">
         <Location id="origin" title="Origin" placeholder="Enter origin address" />
         <Location id="destination" title="Destination" placeholder="Enter destination address" />
-        <button id="calc_btn">Calculate Distance</button>
+        <button id="calc_btn" className="btn">Calculate Distance</button>
+        <Results id="results"/>
         <section id="map">MAP</section>
       </main>
 
