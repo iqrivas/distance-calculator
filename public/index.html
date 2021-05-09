@@ -49,18 +49,17 @@
           var autocomplete_destination = new google.maps.places.Autocomplete(input_destination);
           autocomplete_origin.addListener('place_changed', function () {
             var place_origin = autocomplete_origin.getPlace();
-            // place variable will have all the information you are looking for.
-            $('#lat').val(place_origin.geometry['location'].lat());
-            $('#long').val(place_origin.geometry['location'].lng());
+            console.log(place_origin)
+            document.getElementById('origin_lat').innerHTML = `Latitude: ${place_origin.geometry['location'].lat()}`;
+            document.getElementById('origin_lng').innerHTML = `Longitude: ${place_origin.geometry['location'].lng()}`;
           });
           autocomplete_destination.addListener('place_changed', function () {
             var place_destination = autocomplete_destination.getPlace();
-            // place variable will have all the information you are looking for.
-            $('#lat').val(place_destination.geometry['location'].lat());
-            $('#long').val(place_destination.geometry['location'].lng());
+            console.log(place_destination)
+            document.getElementById('destination_lat').innerHTML = `Latitude: ${place_destination.geometry['location'].lat()}`;
+            document.getElementById('destination_lng').innerHTML = `Longitude: ${place_destination.geometry['location'].lng()}`;
           });
       }
-
     </script>
   </body>
 </html>
