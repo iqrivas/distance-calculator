@@ -9,6 +9,10 @@ html {
   font-family: "DM Sans", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -122,4 +126,8 @@ html {
 .results__details--transit {
   text-align: center;
   text-decoration: underline;
+}
+.results__details--warning {
+  text-align: center;
+  color: red;
 }
