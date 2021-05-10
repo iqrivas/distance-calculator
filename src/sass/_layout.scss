@@ -1,0 +1,67 @@
+@use '_base.scss';
+
+.header {
+  @include base.flex;
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+.grid {
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    "origin destination"
+    "calc calc"
+    "res res"
+    "map map";
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 15px;
+  grid-column-gap: 5px;
+  min-width: 340px;
+  max-width: 800px;
+
+  margin: auto;
+  padding: 1rem;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+#origin {
+  grid-area: origin;
+}
+
+#destination {
+  grid-area: destination;
+}
+
+#btn_calc {
+  grid-area: calc;
+}
+
+#results {
+  grid-area: res;
+}
+
+#map {
+  grid-area: map;
+}
+
+@media all and (max-width: 650px) {
+  .grid {
+    grid-template-areas:
+      "origin"
+      "destination"
+      "calc"
+      "res"
+      "map";
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .results {
+    width: 100%;
+    min-width: 250px;
+  }
+}

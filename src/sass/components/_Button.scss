@@ -1,0 +1,18 @@
+@use '../base';
+
+.btn {
+    background: base.$primary-color;
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 3px;
+    padding: 1rem;
+
+    &:focus {
+        border: 2px solid;    
+    }
+
+    &:active {
+        transform: translateY(2px);
+    }
+}
