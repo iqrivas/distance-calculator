@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './sass/App.scss';
 
-import Location from './components/Location';
+import LocationForm from './components/LocationForm';
 import Results from './components/Results';
 
 function App() {
@@ -11,9 +10,7 @@ function App() {
         <h1>How far is it?</h1>
       </header>
       <main className="grid">
-        <Location id="origin" title="Origin" placeholder="Enter origin address" />
-        <Location id="destination" title="Destination" placeholder="Enter destination address" />
-        <button id="calc_btn" className="btn">Calculate Distance</button>
+        <LocationForm />
         <Results id="results"/>
         <section id="map">MAP</section>
       </main>

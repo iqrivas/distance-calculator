@@ -49,13 +49,17 @@
           var autocomplete_destination = new google.maps.places.Autocomplete(input_destination);
           autocomplete_origin.addListener('place_changed', function () {
             var place_origin = autocomplete_origin.getPlace();
-            console.log(place_origin)
+            let originName = document.getElementById('origin_name');
+            originName.value = place_origin.formatted_address;
+            originName.dispatchEvent(new Event('input', { bubbles: true}));
             document.getElementById('origin_lat').innerHTML = `Latitude: ${place_origin.geometry['location'].lat()}`;
             document.getElementById('origin_lng').innerHTML = `Longitude: ${place_origin.geometry['location'].lng()}`;
           });
           autocomplete_destination.addListener('place_changed', function () {
             var place_destination = autocomplete_destination.getPlace();
-            console.log(place_destination)
+            let destinationName = document.getElementById('destination_name');
+            destinationName.value = place_destination.formatted_address;
+            destinationName.dispatchEvent(new Event('input', { bubbles: true}));
             document.getElementById('destination_lat').innerHTML = `Latitude: ${place_destination.geometry['location'].lat()}`;
             document.getElementById('destination_lng').innerHTML = `Longitude: ${place_destination.geometry['location'].lng()}`;
           });

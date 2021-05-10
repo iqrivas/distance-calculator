@@ -42,7 +42,7 @@ html {
   grid-area: destination;
 }
 
-#calc_btn {
+#btn_calc {
   grid-area: calc;
 }
 
