@@ -12,7 +12,7 @@ function App() {
       <main className="grid">
         <LocationForm />
         <Results id="results"/>
-        <section id="map">MAP</section>
+        <section id="map"></section>
       </main>
 
     </div>
