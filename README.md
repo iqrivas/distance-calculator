@@ -59,3 +59,9 @@ Start the server
 ```bash
   npm run start
 ```
+
+## Project Developed as part of Platzi Master:
+
+- Created by Denisse Rivas [Github](https://github.com/iqrivas) | [LinkedIn](https://www.linkedin.com/in/iqrivas/) 
+- Frontend Focus | Slack: DenisseRivas
+- Assigned by: Platzi Master Coach - Ana Belisa Martinez
